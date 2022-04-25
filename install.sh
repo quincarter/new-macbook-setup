@@ -36,8 +36,18 @@ sleep 5
 echo "#######################################################"
 echo "########## Installing Packages with Brew ##############"
 echo "#######################################################"
+
+echo "Installing Git and Wget"
 brew install git wget
+
+echo "Installing Common Dev Apps"
 brew install --cask warp google-chrome spotify visual-studio-code bartender spectacle alfred slack figma mysides
+
+echo "Look into Peek Quick Look App before installing other quick look apps"
+# echo "Installing Some Quicklook Helpers for support with dev files like Markdown and json"
+# brew install --cask qlcolorcode qlmarkdown quicklook-json qlprettypatch
+
+echo "Installing NVM"
 brew install nvm
 sleep 5
 
