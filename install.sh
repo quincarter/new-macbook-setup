@@ -37,7 +37,7 @@ echo "#######################################################"
 echo "########## Installing Packages with Brew ##############"
 echo "#######################################################"
 brew install git wget
-brew cask install warp google-chrome spotify visual-studio-code bartender spectacle alfred slack figma mysides
+brew install --cask warp google-chrome spotify visual-studio-code bartender spectacle alfred slack figma mysides
 brew install nvm
 sleep 5
 
