@@ -1,13 +1,20 @@
 #!/bin/bash
 ##### Take user input for later
-echo "Enter your Github Email Address"
+echo "Enter your Github Email Address [Leave Blank if you don't need to do this]"
 read ghEmail
-echo "Enter your Full Name for Commit History"
-read ghFirstAndLastName
+echo "Enter your Full Name for Commit History [Leave Blank if you don't need to do this]"
+read ghFirstName ghLastName
+echo "What Directory do your want your Projects to live in? DEFAULT: [~/Documents/Dev]"
+read devProjectDir
 
-##########################
-##### INITIAL SETUP ######
-##########################
+if [ -z "$devProjectDir" ]
+then
+    devProjectDir="~/Documents/Dev"
+fi
+
+echo "##########################"
+echo "##### INITIAL SETUP ######"
+echo "##########################"
 
 ### Installing HomeBrew Package Manager
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -19,20 +26,35 @@ sleep 5
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sleep 5
 
-mkdir -p .nvm # makes the directory if it doesn't exist yet
+echo "Creating ~/.nvm directory if it doesn't exist"
+mkdir -p ~/.nvm # makes the directory if it doesn't exist yet
 
-clear
+echo "Creating Directory for dev projects to live in: $devProjectDir"
+mkdir -p $devProjectDir
+sleep 5
+
 echo "#######################################################"
 echo "########## Installing Packages with Brew ##############"
 echo "#######################################################"
 brew install git wget
-brew install --cask warp google-chrome spotify visual-studio-code bartender spectacle alfred slack figma
+brew cask install warp google-chrome spotify visual-studio-code bartender spectacle alfred slack figma mysides
 brew install nvm
+sleep 5
 
 ### Setup Git Globals from user input
-git config --global user.name $ghFirstAndLastName
-git config --global user.email $ghEmail
+if [ -z "$ghEmail" ]
+then
+    echo "Github Email was empty. Skipping Github config setup"
+else 
+    git config --global user.email $ghEmail
+    if [ -z "$ghFirstName" ]
+    then
+        echo "Github Name was empty skipping Github Name Config Setup"
+    else 
+        git config --global user.name $ghFirstName $ghLastName
+fi
 cat ~/.gitconfig
+sleep 5
 
 echo "#######################################################"
 echo "## Installation Finished. Don't forget to setup NVM! ##"
@@ -40,6 +62,7 @@ echo "#######################################################"
 
 # Setting default browser as Google Chrome
 open -a "Google Chrome" --args --make-default-browser
+sleep 5 
 
 echo "########################################################"
 echo "## If NVM Setup properly, these commands will run fine #"
