@@ -38,4 +38,7 @@ echo "#######################################################"
 echo "## Installation Finished. Don't forget to setup NVM! ##"
 echo "#######################################################"
 
+# Setting default browser as Google Chrome
+open -a "Google Chrome" --args --make-default-browser
+
 exit 0
