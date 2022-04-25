@@ -30,7 +30,7 @@ $ chmod +x install.sh && ./install.sh
 ### Mac Specific
 
 - This is geared towards a mac specific setup, and the following apps are no exception.
-  - [Warp](https://warp.dev){:target="_blank" rel="noopener"} - A new terminal replacement for MacOS built on Rust
+  - [Warp](https://warp.dev) - A new terminal replacement for MacOS built on Rust
   - [Bartender](https://www.macbartender.com/) - For keeping your top bar clean
   - [Spectacle](https://www.spectacleapp.com/) - Allows windows to be moved around with hotkeys similar to Windows
   - [Alfred](https://www.alfredapp.com/) - $$ This one does cost after a time. But free to try. This is a spotlight replacement with a lot of features.
