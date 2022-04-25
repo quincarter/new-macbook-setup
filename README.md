@@ -18,11 +18,11 @@ $ chmod +x install.sh && ./install.sh
   - Spotify
   - Visual Studio Code
   - Slack
-  - Figma
+  - [Figma](https://www.figma.com/)
 - Tools ready out of the box:
-  - Homebrew
+  - [Homebrew](https://brew.sh/)
     - This should install xcode command line utils as well, but if it doesn't then you can.
-  - OH MY ZSH - Basically makes the terminal prettier
+  - [OH MY ZSH](https://ohmyz.sh/) - Basically makes the terminal prettier
   - git
   - wget
   - nvm - Node Version Manager - This is useful for managing the node version. (FYI this also keeps your global npm modules a little tidier and makes it so you don't have to use `sudo` when doing `npm -g`)
@@ -30,7 +30,7 @@ $ chmod +x install.sh && ./install.sh
 ### Mac Specific
 
 - This is geared towards a mac specific setup, and the following apps are no exception.
-  - Warp - A new terminal replacement for MacOS built on Rust
-  - Bartender - For keeping your top bar clean
-  - Spectacle - Allows windows to be moved around with hotkeys similar to Windows
-  - Alfred - $$ This one does cost after a time. But free to try. This is a spotlight replacement with a lot of features.
+  - [Warp](warp.dev) - A new terminal replacement for MacOS built on Rust
+  - [Bartender](https://www.macbartender.com/) - For keeping your top bar clean
+  - [Spectacle](https://www.spectacleapp.com/) - Allows windows to be moved around with hotkeys similar to Windows
+  - [Alfred](https://www.alfredapp.com/) - $$ This one does cost after a time. But free to try. This is a spotlight replacement with a lot of features.
