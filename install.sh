@@ -41,4 +41,18 @@ echo "#######################################################"
 # Setting default browser as Google Chrome
 open -a "Google Chrome" --args --make-default-browser
 
+echo "########################################################"
+echo "## If NVM Setup properly, these commands will run fine #"
+echo "########################################################"
+
+echo "Setting nvm to lts node version"
+nvm install --lts
+
+echo "Installing node 14 as a fallback version"
+nvm install 14
+
+nvm use --lts 
+
+node -v && npm -v
+
 exit 0
