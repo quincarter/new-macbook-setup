@@ -7,7 +7,7 @@
 - Run the following command in your terminal window
 
 ```shell
-$ chmod +x install.sh && ./install.sh
+chmod +x install.sh && ./install.sh
 ```
 
 ## Features
